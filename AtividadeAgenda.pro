@@ -17,6 +17,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     agenda.cpp \
+    interfacelegalperson.cpp \
+    interfacephysicalperson.cpp \
+    interfaceschedule.cpp \
     main.cpp \
     mainwindow.cpp \
     node.cpp \
@@ -26,6 +29,9 @@ SOURCES += \
 
 HEADERS += \
     agenda.h \
+    interfacelegalperson.h \
+    interfacephysicalperson.h \
+    interfaceschedule.h \
     mainwindow.h \
     node.h \
     pessoa.h \
@@ -33,6 +39,9 @@ HEADERS += \
     pessoajuridica.h
 
 FORMS += \
+    interfacelegalperson.ui \
+    interfacephysicalperson.ui \
+    interfaceschedule.ui \
     mainwindow.ui
 
 # Default rules for deployment.

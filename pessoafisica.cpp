@@ -105,7 +105,4 @@ QString PessoaFisica::print()const
     return saida;
 }
 
-
-
-
 }

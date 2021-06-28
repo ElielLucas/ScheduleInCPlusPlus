@@ -134,7 +134,4 @@ bool Agenda::printAll(QString *saida)
     return true;
 }
 
-
-
-
 }

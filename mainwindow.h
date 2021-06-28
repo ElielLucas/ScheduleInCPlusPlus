@@ -1,8 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include<QMainWindow>
 #include<QMessageBox>
+#include<interfacephysicalperson.h>
+#include<interfacelegalperson.h>
+#include<interfaceschedule.h>
+
 #include<agenda.h>
 #include<pessoafisica.h>
 #include<pessoajuridica.h>
@@ -18,67 +22,18 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    void desabilitarNome();
-    void desabilitarEndereco();
-    void desabilitarEmail();
-    void desabilitarCpf();
-    void desabilitarData();
-    void desabilitarEstadoCivil();
-    void desabilitarCnpj();
-    void desabilitarInscricaoEstadual();
-    void desabilitarRazaoSocial();
 
-    void habilitarNome();
-    void habilitarEndereco();
-    void habilitarEmail();
-    void habilitarCpf();
-    void habilitarData();
-    void habilitarEstadoCivil();
-    void habilitarCnpj();
-    void habilitarInscricaoEstadual();
-    void habilitarRazaoSocial();
-
-    void desabilitarCheks();
-    void habilitarCheks();
-    void desabilitarCheksAdicionar();
-    void habilitarCheksAdicionar();
-    void desabilitarCheksProcurarIden();
-    void habilitarCheksProcurarIden();
-    void desabilitarCheksProcurarNome();
-    void habilitarCheksProcurarNome();
-    void desabilitarCheksRemoverIden();
-    void habilitarCheksRemoverIden();
-    void desabilitarCheksRemoverNome();
-    void habilitarCheksRemoverNome();
-    void desabilitarCheksMostrar();
-    void habilitarCheksMostrar();
-
+    tp2::Agenda* getAgenda(){return agenda;}
 
 private slots:
+    void on_pushButtonPessoaFisica_clicked();
 
-    void on_checkBoxAdicionar_stateChanged(int arg1);
+    void on_pushButtonAgenda_clicked();
 
-    void on_checkBoxProcurarIden_stateChanged(int arg1);
-
-    void on_checkBoxRemoverIden_stateChanged(int arg1);
-
-    void on_checkBoxMostrar_stateChanged(int arg1);
-
-    void on_pushButtonStart_clicked();
-
-    void on_radioButtonPessoaFisica_clicked();
-
-    void on_radioButtonPessoaJuridica_clicked();
-
-    void on_checkBoxProcurarNome_stateChanged(int arg1);
-
-    void on_checkBoxRemoverNome_stateChanged(int arg1);
-
-    void on_pushButtonOrdenar_clicked();
-
-    void on_pushButtonOrdenarNomes_clicked();
+    void on_pushButtonPessoaJuridica_clicked();
 
 private:
     Ui::MainWindow *ui;
+    tp2::Agenda *agenda;
 };
 #endif // MAINWINDOW_H
